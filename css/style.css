@@ -29,6 +29,11 @@ nav {
   background-image: linear-gradient(to right, rgb(2, 63, 2), #ffffff, #932929);
   color: transparent;
   -webkit-background-clip: text;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.logo:hover {
+  transform: translate(3px, -3px);
 }
 .nav-links {
   display: flex;
@@ -58,10 +63,19 @@ li:not(:last-child) .nav-link:active {
 .btn:visited {
   padding: 1rem 3rem;
   border-radius: 0.8rem;
+  display: inline-block;
+  text-align: center;
   text-decoration: none;
 }
-.btn-green:hover,
-.btn-green:active {
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 2px 3px 3px #e76f6fbc;
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 2px 3px 3px #e76f6f4d;
+}
+.btn-green:hover {
   background-color: rgb(181, 28, 35);
 }
 
@@ -76,11 +90,10 @@ li:not(:last-child) .nav-link:active {
 
   /* align-items: center; */
 
-  justify-content: space-evenly;
+  justify-content: space-between !important;
 }
 .positioning {
   position: relative;
-
   width: 50%;
 }
 .welcome-text {
@@ -117,19 +130,15 @@ li:not(:last-child) .nav-link:active {
   text-align: center;
 }
 .image-container {
-  width: 50%;
   display: flex;
+  height: 100%;
 }
 .image-container img {
-  align-self: flex-start;
+  height: 100%;
+
   object-fit: cover;
-  border-radius: 50%;
-  transition: all 0.3s;
-  transform: rotate(-45deg);
 }
-.image-container img:hover {
-  transform: rotate(0deg) scale(1.2);
-}
+
 .button-container {
   display: block;
   text-align: center;
@@ -146,16 +155,5 @@ li:not(:last-child) .nav-link:active {
 }
 .btn-none:hover,
 .btn-none:active {
-  box-shadow: 1px 3px 3px rgba(255, 255, 255, 0.091);
   background-color: #932929;
-}
-.button-container:hover {
-  transform: translateY(-3px);
-}
-.btn-none:active {
-  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.342);
-  background-color: #932929;
-}
-.button-container:active {
-  transform: translateY(-1px);
 }
