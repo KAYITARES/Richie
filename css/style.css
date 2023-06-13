@@ -128,12 +128,14 @@ li:not(:last-child) .nav-link:active {
   transform: rotate(-45deg);
 }
 .image-container img:hover {
-  transform: rotate(0deg);
+  transform: rotate(0deg) scale(1.2);
 }
 .button-container {
   display: block;
   text-align: center;
   margin-top: 3rem;
+  transition: all 0.3s;
+  backface-visibility: hidden;
 }
 .btn-none:link,
 .btn-none:visited {
@@ -144,5 +146,16 @@ li:not(:last-child) .nav-link:active {
 }
 .btn-none:hover,
 .btn-none:active {
+  box-shadow: 1px 3px 3px rgba(255, 255, 255, 0.091);
   background-color: #932929;
+}
+.button-container:hover {
+  transform: translateY(-3px);
+}
+.btn-none:active {
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.342);
+  background-color: #932929;
+}
+.button-container:active {
+  transform: translateY(-1px);
 }
