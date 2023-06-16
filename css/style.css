@@ -12,13 +12,18 @@ html {
 body {
   color: #eee;
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 nav {
-  background-color: #222;
+  background-color: #222222fb;
   padding: 2rem;
   display: flex;
   z-index: 9999;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  scroll-behavior: smooth;
+  width: 100%;
   box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.116);
   justify-content: space-around;
 }
@@ -81,8 +86,9 @@ li:not(:last-child) .nav-link:active {
 
 .home-container {
   background-image: url("https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?");
-  height: 87vh;
+  height: 100vh;
   width: 100%;
+
   background-size: cover;
   background-position: center center;
   object-fit: cover;
@@ -171,10 +177,14 @@ li:not(:last-child) .nav-link:active {
 .btn-none:active {
   background-color: #932929;
 }
-.about-container {
+.about-container,
+.portfolio-container {
   padding: 8rem 10rem;
+}
+.about-container {
   background-color: #222;
 }
+
 .heading-title {
   font-size: 4.8rem;
   font-weight: 700;
@@ -265,4 +275,51 @@ li:not(:last-child) .nav-link:active {
 }
 .about-image img {
   width: 100%;
+}
+.portfolio-container {
+  background-color: #000;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: 8rem;
+}
+.card {
+  background-color: #222;
+  border-radius: 0.8rem;
+  padding: 3rem;
+  box-shadow: 1px 3px 3px rgba(255, 255, 255, 0.062);
+  transition: all 0.3s;
+}
+.card:hover {
+  background-color: #932929;
+  transform: translate(10px, -10px);
+}
+.card-container i {
+  font-size: 4.8rem;
+  font-weight: bold;
+
+  margin-bottom: 2rem;
+  color: #eee;
+}
+
+.card-container h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #eee;
+}
+.card-container p {
+  font-size: 1.4rem;
+  color: #eee;
+}
+
+.link-portfolio:link,
+.link-portfolio:visited {
+  color: #eee;
+  text-decoration: none;
+  font-size: 1.4rem;
+  display: inline-block;
+  margin-top: 2rem;
 }
