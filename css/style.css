@@ -15,7 +15,6 @@ body {
   position: relative;
 }
 nav {
-  background-color: #222222fb;
   padding: 2rem;
   display: flex;
   z-index: 9999;
@@ -27,6 +26,8 @@ nav {
   box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.116);
   justify-content: space-between;
   align-items: center;
+
+  background-color: #222222fb;
 }
 .logo {
   font-size: 2.8rem;
@@ -56,11 +57,6 @@ nav {
   transition: all 0.3s;
 }
 
-li:not(:last-child) .nav-link:hover,
-li:not(:last-child) .nav-link:active {
-  color: rgb(78, 221, 78);
-  border-bottom: 2px solid rgb(78, 221, 78);
-}
 .btn-green:link,
 .btn-green:visited {
   background-color: rgb(142, 8, 15);
@@ -401,6 +397,7 @@ li:not(:last-child) .nav-link:active {
     rgba(0, 128, 0, 0.625),
     rgba(147, 42, 42, 0.682)
   );
+  border-bottom: 2px solid rgb(78, 221, 78);
 }
 
 .skills-content--content h3 {
@@ -446,16 +443,7 @@ li:not(:last-child) .nav-link:active {
 .contact-left span {
   display: block;
 }
-.contact-right {
-  background-image: linear-gradient(to left bottom, #932929a2, #222);
-  padding: 3rem;
-  width: 45%;
-}
-.contact-right h3 {
-  font-size: 2.4rem;
-  text-align: right;
-  font-weight: 500;
-}
+
 .social-media {
   margin-top: 2rem;
 }
@@ -566,4 +554,63 @@ textarea {
   -webkit-writing-mode: vertical-rl;
 
   font-size: 1.6rem;
+}
+.menu-icon {
+  display: none;
+}
+.menu-icon i {
+  font-size: 3rem;
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    font-size: 2.2rem;
+  }
+  .nav-links {
+    gap: 1.5rem;
+  }
+  .nav-link:link,
+  .nav-link:visited {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 992px) {
+  .active {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 100vh;
+
+    background-color: #222;
+    flex-direction: column;
+  }
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav-links li:hover .nav-link {
+    background-color: #ccc;
+    width: 100%;
+    color: black;
+    border: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
 }
