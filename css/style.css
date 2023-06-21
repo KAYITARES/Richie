@@ -25,7 +25,8 @@ nav {
   scroll-behavior: smooth;
   width: 100%;
   box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.116);
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 .logo {
   font-size: 2.8rem;
@@ -49,6 +50,7 @@ nav {
 .nav-link:visited {
   color: #eee;
   display: inline-block;
+  padding: 1rem 0;
   font-size: 1.8rem;
   text-decoration: none;
   transition: all 0.3s;
@@ -354,7 +356,7 @@ li:not(:last-child) .nav-link:active {
 }
 @keyframes scroll {
   0% {
-    transform: translateY(0%);
+    transform: translateY(80%);
   }
   /* 25% {
     transform: translateY(80%);
@@ -366,7 +368,7 @@ li:not(:last-child) .nav-link:active {
     transform: translateY(30%);
   } */
   100% {
-    transform: translateY(-5%);
+    transform: translateY(0%);
   }
 }
 .skills-content {
